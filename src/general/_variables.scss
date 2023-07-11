@@ -1,0 +1,16 @@
+:root {
+  // Colors
+  --first-color: hsl(197, 82%, 22%);
+  --sec-color: hsl(168, 100%, 10%);
+  --third-color: hsl(168, 100%, 50%);
+  --forth-color: hsl(188, 96%, 44%);
+  --fifth-color: hsl(188, 90%, 31%);
+  --sixth-color: hsl(246, 100%, 31%);
+  //   Gradients and background
+  --gradient-green-black: radial-gradient(
+    var(--third-color) 1%,
+    var(--first-color) 99%
+  );
+  //   Sizes
+  --initial-font-size: 62.5%;
+}
