@@ -1,21 +1,30 @@
 import { Page } from '../general/general'
-import url1 from './assets/pattern.png'
-import url2 from './assets/chef.png'
+//  Assets
+import patternUrl from './assets/pattern.png'
+import chefUrl from './assets/chef.png'
 class HomePage extends Page {
   constructor() {
-    this._name = 'home-page'
+    super()
+    this.name = 'home-page'
   }
-  _generateHtml(patternUrl, chefUrl) {
+  _generateHtml() {
     return `
-    <nav>
-    </nav>
-    <main>
-        <img src="${patternUrl}" alt="" class="${this._name}__pattern">
-        <img src="${chefUrl}" alt="" class="${this._name}__chef-img">
+    <main class="${this.name} page">
+        <img src="${patternUrl}" alt="" class="${this.name}__pattern parallax" data-speed="2">
+        <img src="${chefUrl}" alt="" class="${this.name}__chef-img parallax" data-speed="8">
     </main>
     `
   }
-  show() {}
+  applyParallax(className) {
+    const parallax = document.addEventListener('mousemove', function (e) {
+      this.querySelectorAll('.parallax').forEach((layer) => {
+        const speed = layer.getAttribute('data-speed')
+        const x = (window.innerWidth - e.pageX * speed) / 100
+        const y = (window.innerHeight - e.pageY * speed) / 100
+        layer.style.transform = `translateX(${x}px) translateY(${y}px)`
+      })
+    })
+  }
 }
-
-export { HomePage }
+const homePage = Object.deepFreeze(new HomePage())
+export default homePage

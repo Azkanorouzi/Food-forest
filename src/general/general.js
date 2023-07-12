@@ -1,4 +1,10 @@
+import deepFreeze from 'deep-freeze'
+// Adding deep freeze as an Object property
+Object.deepFreeze = deepFreeze
 class Page {
+  constructor() {
+    this.assets = {}
+  }
   _getContainer() {
     return document.querySelector('.container')
   }
@@ -13,7 +19,7 @@ class Page {
     const htmlTemplate = this._generateHtml()
     this._fillContainer(htmlTemplate)
   }
-  hide() {
+  emptyContainer() {
     this._clearContainer()
   }
   fireAnimation() {}
