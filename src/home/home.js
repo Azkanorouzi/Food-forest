@@ -2,6 +2,9 @@ import { Page } from '../general/general'
 //  Assets
 import patternUrl from './assets/pattern.png'
 import chefUrl from './assets/chef.png'
+import fullBurgerUrl from './assets/fullBurger.png'
+import upBurgerUrl from './assets/upburgerbun.png'
+import bottomBurgerUrl from './assets/bottomBurgerbun.png'
 class HomePage extends Page {
   constructor() {
     super()
@@ -9,9 +12,23 @@ class HomePage extends Page {
   }
   _generateHtml() {
     return `
+    <div class="home-page__background parallax" data-speed="1"></div>
     <main class="${this.name} page">
-        <img src="${patternUrl}" alt="" class="${this.name}__pattern parallax" data-speed="2">
-        <img src="${chefUrl}" alt="" class="${this.name}__chef-img parallax" data-speed="8">
+        <h1 class='logo parallax' data-speed = "5">Food Forest</h1>
+        <img src="${patternUrl}" alt="" class="${this.name}__pattern parallax" data-speed="3">
+        <img src="${chefUrl}" alt="" class="${this.name}__chef-img parallax" data-speed="10">
+        <section class="nav">
+          <ul class="nav__list">
+            <li class="nav__link--menu nav__link"
+            data-link="menu">Menu</li>
+            <li class="nav__link nav__link--home"data-link="home">Home</li>
+            <li class="nav__link nav__link--about" data-link="about">
+            About</li>
+          </ul>
+          <img src="${fullBurgerUrl}" alt="" class=" parallax burger-menu--full burger" data-speed="3">
+          <img src="${upBurgerUrl}" alt="" class=" parallax burger-menu--up burger" data-speed="3">
+          <img src="${bottomBurgerUrl}" alt="" class=" parallax burger-menu--bottom burger" data-speed="3">
+        </section>
     </main>
     `
   }
@@ -24,6 +41,9 @@ class HomePage extends Page {
         layer.style.transform = `translateX(${x}px) translateY(${y}px)`
       })
     })
+  }
+  _getBurger() {
+    return document.querySelector('.burger-menu--full')
   }
 }
 const homePage = Object.deepFreeze(new HomePage())
