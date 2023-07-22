@@ -28,10 +28,10 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
-    "bootstrap-icons": "^1.10.5",
     "css-reset-and-normalize": "^2.3.6",
     "deep-freeze": "^0.0.1",
     "sass": "^1.63.6",
-    "sass-loader": "^13.3.2"
+    "sass-loader": "^13.3.2",
+    "simple-parallax-js": "^5.6.2"
   }
 }

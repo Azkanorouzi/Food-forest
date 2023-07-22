@@ -6,17 +6,14 @@ import fullBurgerUrl from './assets/fullBurger.png'
 import upBurgerUrl from './assets/upburgerbun.png'
 import bottomBurgerUrl from './assets/bottomBurgerbun.png'
 class HomePage extends Page {
-  constructor() {
-    super()
-    this.name = 'home-page'
-  }
+  _pageName = 'home-page'
   _generateHtml() {
     return `
     <div class="home-page__background parallax" data-speed="1"></div>
-    <main class="${this.name} page">
+    <main class="${this._pageName} page">
         <h1 class='logo parallax' data-speed = "5">Food Forest</h1>
-        <img src="${patternUrl}" alt="" class="${this.name}__pattern parallax" data-speed="3">
-        <img src="${chefUrl}" alt="" class="${this.name}__chef-img parallax" data-speed="10">
+        <img src="${patternUrl}" alt="" class="${this._pageName}__pattern parallax" data-speed="3">
+        <img src="${chefUrl}" alt="" class="${this.pageName}__chef-img parallax" data-speed="10">
         <section class="nav">
           <ul class="nav__list">
             <li class="nav__link--menu nav__link"
