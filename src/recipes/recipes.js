@@ -3,8 +3,9 @@ import { Page } from '../general/general'
 import fullBurgerUrl from './assets/fullBurger.png'
 import upBurgerUrl from './assets/upburgerbun.png'
 import bottomBurgerUrl from './assets/bottomBurgerbun.png'
-class About extends Page {
-  _pageName = 'home-page'
+
+class Recipes extends Page {
+  _pageName = 'recipes'
   _generateHtml() {
     return `
     <section class="nav">
@@ -27,5 +28,5 @@ class About extends Page {
     `
   }
 }
-const about = Object.deepFreeze(new About())
-export default about
+const recipes = Object.deepFreeze(new Recipes())
+export default recipes
