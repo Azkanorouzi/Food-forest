@@ -1,0 +1,22 @@
+.home-page {
+  position: relative;
+  &__pattern {
+    width: 100vw;
+    height: 130vh;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
+  &__chef-img {
+    position: absolute;
+    right: -220px;
+  }
+  &__background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100vw;
+  }
+}
