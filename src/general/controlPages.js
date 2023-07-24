@@ -8,6 +8,7 @@ export const controlPages = {
   pages: { home, about, recipes },
   init() {
     home.render()
+    this.pages.home.container.classList.remove('overflow-shown')
     this.curPage = 'home'
   },
   start() {
@@ -24,6 +25,15 @@ export const controlPages = {
       this.pages[clickedLink.dataset.link].render()
       this.curPage = clickedLink.dataset.link
       this.start()
+      if (clickedLink.dataset.link === 'home') {
+        this.pages[clickedLink.dataset.link].container.classList.remove(
+          'overflow-shown'
+        )
+        return
+      }
+      this.pages[clickedLink.dataset.link].container.classList.add(
+        'overflow-shown'
+      )
     })
   },
 }

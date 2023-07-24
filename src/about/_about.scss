@@ -1,0 +1,73 @@
+@import '../general/_variables.scss';
+.about {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5rem;
+}
+.info-card {
+  background: black;
+  width: 60vw;
+  padding: 3rem;
+  color: white;
+  font-size: 1.6rem;
+  line-height: 3rem;
+  margin-top: 18rem;
+  top: 250px;
+}
+.nav--about {
+  transform: scale(0.5);
+  position: absolute;
+  top: 50vh;
+}
+.about__title {
+  font-size: 3.5rem;
+  margin-bottom: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav--about {
+  position: fixed;
+}
+.logo--about {
+  font-size: 10rem;
+  background: rgba(0, 255, 128, 0.309);
+  padding-bottom: 2rem;
+  backdrop-filter: blur(1rem);
+}
+.title-link {
+  text-decoration: none;
+  color: var(--third-color);
+  margin-inline: 1.2rem;
+}
+.title-link:focus {
+  color: var(--first-color);
+}
+.title-link:visited {
+  color: var(--third-color);
+}
+.title-link:link {
+  color: white !important;
+}
+.about__subtitle {
+  font-size: 2rem;
+  color: var(--forth-color);
+  margin-bottom: 2rem;
+}
+.github-icon {
+  width: 150px;
+  height: 150px;
+  position: fixed;
+  right: 4rem;
+  bottom: 3rem;
+}
+.me-img {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  display: inline-block;
+  background: red;
+  display: inline-block;
+  margin-right: 1rem;
+}
